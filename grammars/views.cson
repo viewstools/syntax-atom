@@ -1,0 +1,55 @@
+'scopeName': 'source.views'
+'name': 'Views'
+'fileTypes': ['view']
+'patterns': [
+  # block name
+  {
+    'match': '^([A-Z][a-zA-Z0-9]*\\s*)$'
+    'name': 'views.block.keyword'
+  }
+  {
+    'match': '^([A-Z][a-zA-Z0-9]*)\\s+is\\s+.+$'
+    'captures':
+      '1':
+        'name': 'views.block.keyword'
+  }
+  # comment
+  {
+    'match': '^#.+$'
+    'name': 'views.comment'
+  }
+  # margin
+  {
+    'match': '^margin[a-zA-Z]*\\s*(.+)$'
+    'captures':
+      '1':
+        'name': 'views.margin.number'
+  }
+  # padding
+  {
+    'match': '^padding[a-zA-Z]*\\s*(.+)$'
+    'captures':
+      '1':
+        'name': 'views.padding.number'
+  }
+  {
+    'begin': '^[a-z][a-zA-Z0-9]*\\s*'
+    'end': '$'
+    'patterns': [
+      # props
+      {
+        'match': '.*props.*'
+        'captures':
+          '0':
+            'name': 'views.code.function'
+      }
+      # item
+      {
+        'match': '.*item.*'
+        'captures':
+          '0':
+            'name': 'views.code.item.function'
+      }
+    ]
+  }
+]

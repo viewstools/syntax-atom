@@ -1,0 +1,17 @@
+{
+  "name": "language-views",
+  "version": "0.0.0",
+  "description": "Views (viewsdx.com) language support in Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viewsdx/syntax-atom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viewsdx/syntax-atom/issues"
+  },
+  "license": "BSD-3-Clause"
+}
