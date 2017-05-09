@@ -1,6 +1,6 @@
 {
   "name": "language-views",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Views (viewsdx.com) language support in Atom",
   "engines": {
     "atom": "*"
