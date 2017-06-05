@@ -1,6 +1,6 @@
 'scopeName': 'source.views'
 'name': 'Views'
-'fileTypes': ['view']
+'fileTypes': ['view', 'data']
 'patterns': [
   # block name
   {
@@ -38,17 +38,17 @@
     'patterns': [
       # props
       {
-        'match': '.*props.*'
+        'match': '.*(props|item).*'
         'captures':
           '0':
             'name': 'views.code.function'
       }
-      # item
+      # data
       {
-        'match': '.*item.*'
+        'match': '.*.data*'
         'captures':
           '0':
-            'name': 'views.code.item.function'
+            'name': 'views.code.function'
       }
       {
         'match': '.+$'
