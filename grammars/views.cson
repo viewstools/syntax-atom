@@ -8,29 +8,32 @@
     'name': 'views.block.keyword'
   }
   {
-    'match': '^([A-Z][a-zA-Z0-9]*)\\s+[a-z]*\\s*.+$'
+    'match': '^([A-Z][a-zA-Z0-9]*)\\s+.+$'
     'captures':
       '1':
         'name': 'views.block.keyword'
+  }
+  ## user comment
+  {
+    'match': '^##.+$'
+    'name': 'views.userComment'
   }
   # comment
   {
     'match': '^#.+$'
     'name': 'views.comment'
   }
-  # margin
   {
-    'match': '^margin[a-zA-Z]*\\s*(.+)$'
-    'captures':
-      '1':
-        'name': 'views.margin.number'
+    'match': '^onWhen <[a-z][a-zA-Z0-9]*$'
+    'name': 'views.onWhen.function'
   }
-  # padding
   {
-    'match': '^padding[a-zA-Z]*\\s*(.+)$'
-    'captures':
-      '1':
-        'name': 'views.padding.number'
+    'match': '^onWhen <[a-z][a-zA-Z0-9]*$'
+    'name': 'views.onWhen.function'
+  }
+  {
+    'match': '^when <[a-z][a-zA-Z0-9]*$'
+    'name': 'views.when.function'
   }
   {
     'begin': '^[a-z][a-zA-Z0-9]*\\s*'
@@ -38,17 +41,10 @@
     'patterns': [
       # props
       {
-        'match': '.*(props|item).*'
+        'match': '<([a-z][a-zA-Z0-9]*)?'
         'captures':
           '0':
-            'name': 'views.code.function'
-      }
-      # data
-      {
-        'match': '.*.data*'
-        'captures':
-          '0':
-            'name': 'views.code.function'
+            'name': 'views.slot.function'
       }
       {
         'match': '.+$'
