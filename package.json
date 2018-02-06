@@ -1,6 +1,6 @@
 {
   "name": "language-views",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Views Tools (views.tools) language support in Atom",
   "engines": {
     "atom": "*"
