@@ -1,42 +1,38 @@
 'scopeName': 'source.views'
 'name': 'Views'
-'fileTypes': ['view', 'data']
+'fileTypes': ['view']
 'patterns': [
   # block name
   {
-    'match': '^([A-Z][a-zA-Z0-9]*\\s*)$'
+    'match': '^\\s*([A-Z][a-zA-Z0-9]*\\s*)$'
     'name': 'views.block.keyword'
   }
   {
-    'match': '^([A-Z][a-zA-Z0-9]*)\\s+.+$'
+    'match': '^\\s*([A-Z][a-zA-Z0-9]*)\\s+.+$'
     'captures':
       '1':
         'name': 'views.block.keyword'
   }
   ## user comment
   {
-    'match': '^##.+$'
+    'match': '^\\s*##.+$'
     'name': 'views.userComment'
   }
   # comment
   {
-    'match': '^#.+$'
+    'match': '^\\s*#.+$'
     'name': 'views.comment'
   }
   {
-    'match': '^onWhen <[a-z][a-zA-Z0-9]*$'
+    'match': '^\\s*onWhen <[a-z][a-zA-Z0-9]*$'
     'name': 'views.onWhen.function'
   }
   {
-    'match': '^onWhen <[a-z][a-zA-Z0-9]*$'
-    'name': 'views.onWhen.function'
-  }
-  {
-    'match': '^when <[a-z][a-zA-Z0-9]*$'
+    'match': '^\\s*when <[a-z][a-zA-Z0-9]*$'
     'name': 'views.when.function'
   }
   {
-    'begin': '^[a-z][a-zA-Z0-9]*\\s*'
+    'begin': '^\\s*[a-z][a-zA-Z0-9]*\\s*'
     'end': '$'
     'patterns': [
       # props
