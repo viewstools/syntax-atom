@@ -1,6 +1,6 @@
 'scopeName': 'source.views'
 'name': 'Views'
-'fileTypes': ['view']
+'fileTypes': ['view', 'blocks']
 'patterns': [
   # block name
   {
